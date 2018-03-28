@@ -9,7 +9,7 @@ describe "As a user" do
 
       click_on "Locate"
 
-      expect(current_path).to eq("/search?locate=80203")
+      expect(current_path).to eq("/search?location=80203")
       expect(page).to have_css("station-list")
       within("station-list") do
         expect(page).to have_css("station", count: 10)
