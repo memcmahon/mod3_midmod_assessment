@@ -10,17 +10,12 @@ describe "As a user" do
       click_on "Locate"
 
       expect(current_path).to eq("/search?location=80203")
-      expect(page).to have_css("station-list")
-      within("station-list") do
-        expect(page).to have_css("station", count: 10)
-        within("station", match: first) do
-          expect(page).to have_content("Name")
-          expect(page).to have_content("Address")
-          expect(page).to have_content("Fuel Types")
-          expect(page).to have_content("Distance")
-          expect(page).to have_content("Access Times")
-        end
-      end
+
+      expect(page).to have_content("Name", count: 10)
+      expect(page).to have_content("Address", count: 10)
+      expect(page).to have_content("Fuel Types", count: 10)
+      expect(page).to have_content("Distance", count: 10)
+      expect(page).to have_content("Access Times", count: 10)
     end
   end
 end
