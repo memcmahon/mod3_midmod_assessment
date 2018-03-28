@@ -6,6 +6,6 @@ class Station
     @address = info[:street_address]
     @fuel_types = info[:fuel_type_code]
     @distance = info[:distance]
-    @access_times = info[:access_days_times]
+    @access_times = info[:access_days_time]
   end
 end
