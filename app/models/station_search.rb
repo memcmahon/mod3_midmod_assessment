@@ -8,7 +8,6 @@ class StationSearch
 
   def all
     response = NRELSearchService.find_by(location, radius, fuel_type, limit)
-    binding.pry
     StationSearchResult.new(response).stations
   end
 
