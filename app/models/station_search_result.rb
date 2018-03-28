@@ -13,4 +13,5 @@ class StationSearchResult
   end
 
   private
-    attr_reader :latitude, 
+    attr_reader :latitude, :longitude, :total_results, :station_list
+end
